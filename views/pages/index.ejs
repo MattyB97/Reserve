@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+  <title>Place Autocomplete restaurant Search</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <link rel="stylelesheet" type="text/css" href="/public/stylesheets/maps.css" />
+</head>
+
+<body>
+
+
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+
 <head>
   <style>
     /* Set the size of the div element that contains the map */
-   #map {
-     height: 400px;  /* The height is 400 pixels */
-     width: 100%;  /* The width is the width of the web page */
+    #map {
+      height: 400px;
+      /* The height is 400 pixels */
+      width: 100%;
+      /* The width is the width of the web page */
     }
- </style>
+  </style>
   <% include ../partials/header.ejs %>
 </head>
 
@@ -15,40 +37,67 @@
 
   <% include ../partials/nav.ejs %>
 
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="restaurant-logo">
-      <img src="/restaurant-logo.png">
-    </a>
-    <h1>Food Finder</h1>
-    <p>Ever struggling to find somewhere to eat? Hate the inconvenience of having to make reservations? Food Finder shows you all restaurants near your location and allows you to make reservations nice and easy!</p>
-    <label for="address">Address:</label>
-    <input type="text" class="form-control" id="address" placeholder="Enter Address">
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-search"></span> Search For Restaurants</a>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <a href="/" class="restaurant-logo">
+        <img src="/restaurant-logo.png">
+      </a>
+      <h1>Food Finder</h1>
+      <p>Ever struggling to find somewhere to eat? Hate the inconvenience of having to make reservations? Food Finder
+        shows you all restaurants near your location and allows you to make reservations nice and easy!</p>
+      <label for="address">City:</label>
+      <div id="locationField">
+        <input type="text" class="form-control" id="autocomplete" placeholder="Enter City">
+      </div>
+    </div>
   </div>
-</div>
-<div class="container">
-  <div id="map"></div>
-  <script>
-    // Initialize and add the map
-    function initMap(location) {
-      // The location entered by the user
-      var loc = {lat: 43.945801, lng: -78.894600};
-      // The map, centered at the location entered by the user
-      var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 12, center: loc});
-      // The marker, positioned at location entered by the user
-      var marker = new google.maps.Marker({position: loc, map: map});
-    }
-  </script>
-</div>
-<!--Load the API from the specified URL
+
+  <div class="whytry">
+    <div id="map"></div>
+
+    <div id="listing">
+      <table id="resultsTable">
+        <tbody id="results"></tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div style="display: none">
+    <div id="info-content">
+      <table>
+        <tr id="iw-url-row" class="iw_table_row">
+          <td id="iw-icon" class="iw_table_icon"></td>
+          <td id="iw-url"></td>
+        </tr>
+        <tr id="iw-address-row" class="iw_table_row">
+          <td class="iw_attribute_name">Address:</td>
+          <td id="iw-address"></td>
+        </tr>
+        <tr id="iw-phone-row" class="iw_table_row">
+          <td class="iw_attribute_name">Telephone:</td>
+          <td id="iw-phone"></td>
+        </tr>
+        <tr id="iw-rating-row" class="iw_table_row">
+          <td class="iw_attribute_name">Rating:</td>
+          <td id="iw-rating"></td>
+        </tr>
+        <tr id="iw-website-row" class="iw_table_row">
+          <td class="iw_attribute_name">Website:</td>
+          <td id="iw-website"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="js/maps.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7kd_beDHhWfpMdLQmmyzhROakvpJuNKE&callback=initMap&libraries=places&callback=initMap"
+    async defer></script>
+  <!-- Load the API from the specified URL
     * The async attribute allows the browser to render the page while the API loads
     * The key parameter will contain your own API key (which is not needed for this tutorial)
-    * The callback parameter executes the initMap() function
--->
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7kd_beDHhWfpMdLQmmyzhROakvpJuNKE&callback=initMap">
-</script>
+    * The callback parameter executes the initMap() function -->
 </body>
+
 </html>

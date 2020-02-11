@@ -10,11 +10,14 @@
 
   <% include ../partials/nav.ejs %>
 
-<script type="text/javascript" src=../../email.js></script>
 <div class = "container">
   <h1>Enter Your Name</h1>
-  <input type="text" class="form-control" id="address" placeholder="Enter Full name">
-  <a type="button" class="btn btn-lg btn-primary" onclick="send()"><span class="glyphicon glyphicon-search"></span> Make Reservation</a>
+  <input id="fname" type="text" class="form-control" id="fname" placeholder="Enter First Name">
+  <input id="lname" type="text" class="form-control" id="lname" placeholder="Enter Last Name">
+  <input id="resname" type="text" class="form-control" id="resname" placeholder="Enter Restaurant Name">
+  <input id="email" type="email" class="form-control" id="email" placeholder="Enter Email">
+  <button id="reserve" type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-search"></span> Make Reservation</button>
+  <script type="text/javascript" src="js/makeReservation.js"></script>
 </div>
 </body>
 </html>

@@ -10,9 +10,13 @@
 
   <% include ../partials/nav.ejs %>
 <div class = "container">
-  <h1>Enter Your Name</h1>
-  <input type="text" class="form-control" id="address" placeholder="Enter Full name">
-  <a type="button" class="btn btn-lg btn-primary" href="/view?name=a"><span class="glyphicon glyphicon-search"></span>Check Your Reservations</a>
+  <h1>Find Your Current Reservations</h1>
+  <input type="text" class="form-control" id="email" placeholder="Enter Email Address">
+  <button id="viewreserve" type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-search"></span> View Your Reservations</button>
+
+  <div id="reservations-list"></div>
+
+  <script type="text/javascript" src="js/viewReservation.js"></script>
 </div>
 </body>
 </html>
