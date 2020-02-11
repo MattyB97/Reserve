@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <style>
- </style>
+  </style>
+  <!-- Header Include-->
   <% include ../partials/header.ejs %>
 </head>
 
 <body>
-
+  <!-- Nav Include-->
   <% include ../partials/nav.ejs %>
-<div class = "container">
-  <h1>Find Your Current Reservations</h1>
-  <input type="text" class="form-control" id="email" placeholder="Enter Email Address">
-  <button id="viewreserve" type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-search"></span> View Your Reservations</button>
+  <div class="container">
+    <h1>Find Your Current Reservations</h1>
+    <input type="text" class="form-control" id="email" placeholder="Enter Email Address">
+    <button id="viewreserve" type="button" class="btn btn-lg btn-primary"><span
+        class="glyphicon glyphicon-search"></span> View Your Reservations</button>
 
-  <div id="reservations-list"></div>
+    <div id="reservations-list"></div>
 
-  <script type="text/javascript" src="js/viewReservation.js"></script>
-</div>
+    <script type="text/javascript" src="js/viewReservation.js"></script>
+  </div>
 </body>
+
 </html>

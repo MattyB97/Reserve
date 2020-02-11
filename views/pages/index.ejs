@@ -36,7 +36,7 @@
 <body>
 
   <% include ../partials/nav.ejs %>
-
+  <!-- Main Jumbotron Content-->
   <div class="jumbotron text-center">
     <div class="container">
       <a href="/" class="restaurant-logo">
@@ -51,7 +51,7 @@
       </div>
     </div>
   </div>
-
+  <!-- Map Container-->
   <div class="whytry">
     <div id="map"></div>
 
@@ -62,7 +62,7 @@
     </div>
   </div>
 
-
+  <!-- Content Display-->
   <div style="display: none">
     <div id="info-content">
       <table>
@@ -89,15 +89,11 @@
       </table>
     </div>
   </div>
-
+  <!-- Script Reference and API Key-->
   <script src="js/maps.js"></script>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7kd_beDHhWfpMdLQmmyzhROakvpJuNKE&callback=initMap&libraries=places&callback=initMap"
     async defer></script>
-  <!-- Load the API from the specified URL
-    * The async attribute allows the browser to render the page while the API loads
-    * The key parameter will contain your own API key (which is not needed for this tutorial)
-    * The callback parameter executes the initMap() function -->
 </body>
 
 </html>

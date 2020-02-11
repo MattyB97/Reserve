@@ -3,13 +3,15 @@
 <head>
   <style>
  </style>
+ <!-- Header Include-->
   <% include ../partials/header.ejs %>
 </head>
 
 <body>
-
+  <!-- Nav Include-->
   <% include ../partials/nav.ejs %>
 
+  <!-- Input Fields-->
 <div class = "container">
   <h1>Enter Your Name</h1>
   <input id="fname" type="text" class="form-control" id="fname" placeholder="Enter First Name">
@@ -17,6 +19,7 @@
   <input id="resname" type="text" class="form-control" id="resname" placeholder="Enter Restaurant Name">
   <input id="email" type="email" class="form-control" id="email" placeholder="Enter Email">
   <button id="reserve" type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-search"></span> Make Reservation</button>
+  <!-- Script include-->
   <script type="text/javascript" src="js/makeReservation.js"></script>
 </div>
 </body>

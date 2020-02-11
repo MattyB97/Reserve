@@ -1,3 +1,4 @@
+/** CSS for Application*/
 .jumbotron {
   background: #8a2ce2;
   color: white;
@@ -51,27 +52,15 @@ table {
   font-size: 12px;
 }
 .restaurant-search {
-  /* -webkit-box-align: center; */
-  /* -ms-flex-align: center; */
-  /* align-items: center; */
   display: flex;
   justify-content: center;
-  /* background: #fff;
-              display: -webkit-box;
-              display: -ms-flexbox; */
-  /* left: 0;
-              position: absolute;
-              top: 0; */
   width: 70%;
-  /* z-index: 1; */
   margin: 30px;
 }
 #map {
-  /* margin-top: 40px; */
   width: 70vw;
 }
 #listing {
-  /* position: absolute; */
   width: 200px;
   height: 470px;
   overflow: auto;
