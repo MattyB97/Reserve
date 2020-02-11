@@ -2,12 +2,12 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser');
 
-let process = {
-  env: {
-    DATABASE_URL: 'postgres://hqweeralomggdr:628f3c100944e5cfe16049a1b19f3fcc455a168a6f2703ed488813633390fd80@ec2-34-192-30-15.compute-1.amazonaws.com:5432/d8hpekr59e45c8',
-    SENDGRID_API_KEY: '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'
-  }
-}
+// let process = {
+//   env: {
+//     DATABASE_URL: 'postgres://hqweeralomggdr:628f3c100944e5cfe16049a1b19f3fcc455a168a6f2703ed488813633390fd80@ec2-34-192-30-15.compute-1.amazonaws.com:5432/d8hpekr59e45c8',
+//     SENDGRID_API_KEY: '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'
+//   }
+// }
 
 const PORT = process.env.PORT || 5000
 const {
